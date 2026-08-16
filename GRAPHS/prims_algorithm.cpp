@@ -32,7 +32,7 @@ int main()
         int node=pq.top().second.first;
         int parent= pq.top().second.second;
         pq.pop();
-        if(vis[node]==1) continue;
+        if(vis[node]==1) continue; // cycle wala case when node is alreday visited it means already added in MST
         vis[node]=1;
         if(parent!=-1){
             sum=sum+wt;
