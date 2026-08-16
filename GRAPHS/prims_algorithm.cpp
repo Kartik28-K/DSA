@@ -41,7 +41,7 @@ int main()
         for(auto it : adj[node]){
             int adjNode=it.first;
             int adjWt=it.second;
-            if(!vis[adjNode]){
+            if(!vis[adjNode]){ // cycle wala case when node is alreday visited it means already added in MST
                 pq.push({adjWt,{adjNode,node}});
             }
         }
